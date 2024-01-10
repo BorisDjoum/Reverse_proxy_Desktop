@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <title>Hello World!</title>
+    <title>Hello from Electron renderer!</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <h1>💖 Hello World!</h1>
     <p>Welcome to your Electron application.</p>
+    <p id="info"></p>
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
   </body>
+  <script src="./renderer.js"></script>
 </html>

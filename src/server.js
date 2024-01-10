@@ -1,8 +1,7 @@
 const http = require('http');
-const expressApp = require('./expressApp');
-/*const server = http.createServer((req, res) => {
-    res.end('Voilà la réponse du serveur !');
-});*/
+const expressApp = require('./preload');
+
+const hostname = '127.0.0.1';
 
 const normalizePort = val => {
     const port = parseInt(val, 10);
@@ -47,4 +46,6 @@ server.on('listening', () => {
   console.log('Listening on ' + bind);
 });
 
-server.listen(port);
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
